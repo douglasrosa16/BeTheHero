@@ -28,7 +28,7 @@ export default function Detail(){
         })
     }
 
-    function sendWhatsapp(){
+    function sendWhatsapp(){      
         Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${message}`)
     }
 
@@ -51,8 +51,7 @@ export default function Detail(){
 
                 <Text style={styles.incidentProperty}>VALOR:</Text>
                 <Text style={styles.incidentValue}>
-                    {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</Text>
-
+                    {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</Text>                    
             </View>
             <View style={styles.contactBox}>
                 <Text style={styles.heroTitle}>Salve o Dia</Text>
